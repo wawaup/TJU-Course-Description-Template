@@ -2,6 +2,9 @@
 
 本仓库提供了一个 [Typst](https://typst.app/) 课程描述模板，旨在帮助生成清晰专业的课程摘要，适合天津大学学生申请欧陆学校时使用。
 
+- 添加了credit system的说明
+- 增加学分在目录的显示方便查阅
+
 ## 预览
 
 | ![main_page-0001](./assets/main_page-0001.jpg) | ![main_page-0002](./assets/main_page-0002.jpg) |

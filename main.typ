@@ -27,7 +27,7 @@
   id: [Course Id 1],
   semester: [Semester 1],
   credit: [Credit 1],
-  ects: [ECTS 1],
+  ects: [1],
   grade: [Grade 1],
   content: [
     - Chapter 1
@@ -54,7 +54,7 @@
   id: [Course Id 2],
   semester: [Semester 2],
   credit: [Credit 2],
-  ects: [ECTS 2],
+  ects: [2],
   grade: [Grade 2],
   content: [
     - Chapter 1

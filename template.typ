@@ -47,6 +47,13 @@
     This document describes courses taken at *Tianjin University*. The credit system at Tianjin University differs from the European Credit Transfer and Accumulation System (ECTS). The following conversion and workload information applies based on the official transcript regulations:
     
     #v(1em)
+
+    - Our minimum curriculum credits for graduation (including courses and practicum)：*160 Credits*.
+    - In Europe, 60 ECTS credits are the equivalent of a full year of study or work. The number of minimum ECTS for 4-year bachelor degree is *240*. Therefore, the conversion ratio between Original Credit and ECTS is:
+    #align(center)[
+      *1 Original Credit corresponding to 1.5 ECTS*
+    ]
+    #v(1em)
     
     #table(
       columns: (auto, 1fr),
@@ -66,7 +73,6 @@
 
     - *Centralized Practice*: One credit is awarded per week of full-time practical training or internship.
 
-    - *Total Workload*: One credit point at Tianjin University is equivalent to *1.5 ECTS*. The total study time per credit point (approx. 45 hours) includes classroom instruction (lectures, tutorials, and experiments), as well as self-study activities such as homework, project work, and exam preparation.
   ]
 
   // Page settings
@@ -89,14 +95,40 @@
     // 这里注释了水印背景设置
   )
 
-  // Table of contents
+// Table of contents
   page(footer: [#h(1fr)#datetime.today().display()])[
+    #show outline.entry.where(level: 2): it => {
+      let loc = it.element.location()
+      
+      context {
+        let m = query(selector(<course_ects>).after(loc))
+        
+        if m != () and m.first().location().page() == loc.page() {
+          let ects_val = m.first().value
+          
+          // 使用 it.indented 处理缩进，并将标题、学分、虚线、页码放在同一个块中
+          it.indented(
+            it.prefix(), // 自动获取 1.1, 2.1 等编号
+            [
+              #it.element.body
+              #h(0.4em)
+              #text(style: "italic", fill: gray.darken(20%), weight: "regular")[(#ects_val ECTS)]
+              #box(width: 1fr, it.fill)
+              #it.page()
+            ]
+          )
+        } else {
+          it
+        }
+      }
+    }
+    
     #outline(
       title: "Table of Contents",
       indent: 2em,
     )
   ]
-
+  
   // Main body
   counter(page).update(1)
   set par(justify: true)
@@ -118,7 +150,11 @@
   description: none,
   assessment: none,
 ) = {
-  heading(depth: 2)[#name]
+  
+  heading(depth: 2)[
+    #name
+    #metadata(ects) <course_ects>
+  ]
   let cells = (
     ([*Course Title*], name),
     ([*Course No.*], id),
