@@ -7,9 +7,9 @@
 
 ## 预览
 
-| ![main_page-0001](./assets/main_page-0001.jpg) | ![main_page-0002](./assets/main_page-0002.jpg) |
-| -------------------------------------------- | -------------------------------------------- |
-| ![main_page-0003](./assets/main_page-0003.jpg) | ![main_page-0004](./assets/main_page-0004.jpg) |
+| ![main_page-0001](./assets/course description-1.png) | ![main_page-0002](./assets/course description-2.png) |
+| -------------------------------------------------- | -------------------------------------------------- |
+| ![main_page-0003](./assets/course description-3.png) | ![main_page-0004](./assets/course description-4.png) |
 
 ## 使用方法
 
