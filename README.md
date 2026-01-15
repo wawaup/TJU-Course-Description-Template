@@ -7,9 +7,9 @@
 
 ## 预览
 
-| ![](./assets/course description-1.png) | ![](./assets/course description-2.png) |
+| ![](./assets/course_description_1.png) | ![](./assets/course_description_2.png) |
 | ------------------------------------ | ------------------------------------ |
-| ![](./assets/course description-3.png) | ![](./assets/course description-4.png) |
+| ![](./assets/course_description_3.png) | ![](./assets/course_description_4.png) |
 
 ## 使用方法
 
