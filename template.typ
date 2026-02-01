@@ -110,11 +110,14 @@
           it.indented(
             it.prefix(), // 自动获取 1.1, 2.1 等编号
             [
+              #link(loc)[
               #it.element.body
               #h(0.4em)
               #text(style: "italic", fill: gray.darken(20%), weight: "regular")[(#ects_val ECTS)]
-              #box(width: 1fr, it.fill)
-              #it.page()
+            ]
+            #box(width: 1fr, it.fill)
+            // 页码通常也建议包裹在 link 中，方便点击
+            #link(loc)[#it.page()]
             ]
           )
         } else {
